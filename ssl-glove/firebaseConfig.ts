@@ -4,14 +4,14 @@ import * as FirebaseAuth from 'firebase/auth';
 import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyD0G6O8ksMmqdxlUWbVtUTbYkGb1qE34xE',
-  authDomain: 'glove-b95ba.firebaseapp.com',
-  projectId: 'glove-b95ba',
-  databaseURL: 'https://glove-b95ba-default-rtdb.asia-southeast1.firebasedatabase.app/',
-  storageBucket: 'glove-b95ba.firebasestorage.app',
-  messagingSenderId: '610332069931',
-  appId: '1:610332069931:web:227d3dd38d38df43cbda6e',
-  measurementId: 'G-LVEFF64GTQ',
+  apiKey: process.env.EXPO_PUBLIC_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_PROJECT_ID,
+  databaseURL: process.env.EXPO_PUBLIC_DATABASE_URL,
+  storageBucket: process.env.EXPO_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_MEASUREMENT_ID,
 };
 
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
